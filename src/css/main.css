@@ -309,8 +309,14 @@ strong {
   color: #447788;
   font-weight: bold;
 }
-a strong:hover {
+a {
+  text-decoration: none;
+}
+a strong {
   color: #FF6200;
+}
+a strong:hover {
+  color: #6699AA;
 }
 /* ==========================================================================
    Helper classes
