@@ -89,7 +89,8 @@ textarea {
    Colors
    ========================================================================== */
 
-@blue_cords: #FFFFFF;
+@blue_cords: #223344;
+@pure_white: #FFFFFF;
 @faded_denim: #6699AA;
 @orange: #FF6200;
 @disabled: #888888;
@@ -102,7 +103,7 @@ textarea {
 
 
 body{
-    background-color: @blue_cords;
+    background-color: @pure_white;
     background-size: 100% 100%;
     padding-left:10%;
     padding-right:10%;
@@ -250,17 +251,17 @@ nav{
     height:56vh;
 
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
 }
 
 article{
     position:relative;
-    border-right: solid 1px @atlantis;
+    //border-right: solid 1px @atlantis;
     width:75%;
     height:100%;
     float:left;
     overflow-x: hidden;
-    overflow-y: visible;
+    overflow-y: hidden;
     //background-color: @orange;
     .article{
         padding-top: 2%;
@@ -270,9 +271,11 @@ article{
 
 aside{
     position:relative;
-    width:24%;
+    width:25%;
     height:100%;
     float:left;
+    background-color: @atlantis;
+    color:@softie;
     .info{
         height:95%;
         margin-top: 4%;
@@ -281,6 +284,7 @@ aside{
         border-radius: 0.5vw;
         h2{
             padding-top: 5%;
+
         }
 
 
@@ -302,6 +306,7 @@ aside{
     flex: 0 1 auto;
     align-self: auto;
     width:100%;
+    overflow-y: visible;
 }
 
 .card-item-separator
@@ -313,6 +318,7 @@ aside{
     align-content: stretch;
     width:100%;
     transition: all .25s ease-in-out;
+    overflow-y: visible;
 }
 
 .card-item {
@@ -326,18 +332,22 @@ aside{
         float:left;
         position:relative;
     }
+    overflow-y: visible;
+    h2{
+        text-align:center;
+    }
 }
 
-h2{
-    text-align:center;
-}
+
 .foto{
-    height:50%;
-    min-height:27vh;
-    width:40%;
-    margin-left: 30%;
-    margin-right: 28%;
+    height:80%;
+    min-height:45vh;
+    width:80%;
+    margin-left: 10%;
+    margin-right: 9%;
+    margin-top: 5%;
     margin-bottom: 2%;
+    float:left;
 
     background-repeat: no-repeat;
     background-image: url("../img/odaiba.png");
@@ -351,7 +361,7 @@ footer{
     bottom: 1%;
     width: 79%;
     height: 5%;
-    color: @softie;
+    color: @faded_denim;
     font-weight: bold;
     text-align: center;
     div{
@@ -367,8 +377,17 @@ b{
 strong{
     color: @atlantis;
     font-weight: bold;
+
 }
 
+a{
+
+    strong{
+        &:hover{
+            color:@orange;
+        }
+    }
+}
 
 
 
