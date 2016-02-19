@@ -35,9 +35,28 @@
 
 <script>
     function moveArticle(position){
+
         var percentage = -100 * position;
         var margin =percentage + "%";
         document.getElementsByClassName("carousel")[0].style.marginLeft = margin;
+
+        var children = document.getElementsByClassName("menu")[0].children;
+
+        console.log(children);
+        console.log(children.length);
+
+        for(var i = 0; i < children.length; i++)
+        {
+            console.log(i);
+            if(i == position)
+            {
+                children[i].className = children[i].className + " selected";
+            }
+            else
+            {
+                children[i].className = children[i].className.replace('selected','');
+            }
+        }
     }
 </script>
 
@@ -88,7 +107,10 @@
                     </div>
                 </div>
                 <div class="card" >
-                    <h2>Tecnologías</h2>
+
+                    <div class="card-item-separator">
+                        <div class="card-item" >
+                        <h2>Tecnologías</h2>
                     <p>Estas son algunas de las tecnologías con las que me siento más cómodo:</p>
 
                     <p><strong>Groovy/Grails: </strong> Muchísimo más que Java sin punto y coma!
@@ -104,14 +126,17 @@
                         Son la base de todo, y mi amplia experiencia en este campo me dice que es
                         imprescindible saber manejarlas a la hora de detectar causas de problemas.</p>
                     <h2>Otras aptitudes</h2>
-                    <p></p>
 
                     <p><strong>Scrum: </strong> Sin duda, la mejor forma de organizarse en startups.
                         Posiblemente echando mano de Kanban en algún momento...</p>
-
+</div>
+                    </div>
                 </div>
                 <div class="card">
-                    Un hombre de recursos
+                    <div class = "nav">
+                        <div class = "nav-button">Charlas</div>
+                        <div class = "nav-button">Otros</div>
+                    </div>
                 </div>
             </div>
         </div>

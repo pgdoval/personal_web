@@ -135,8 +135,6 @@ header{
     padding: 0;
 
     .menuitem {
-        border-top-left-radius: 1vw;
-        border-top-right-radius: 1vw;
         display: block;
         text-align: center;
         text-decoration: none;
@@ -171,6 +169,14 @@ header{
             transition: all .25s ease-in-out;
             font-size: 1.3em;
         }
+        &.selected{
+            a {
+                color: @pure_white;
+                font-weight: bold;
+            }
+            background-color: @faded_denim;
+            background-image: none;
+        }
     }
     .contact{
     }
@@ -203,8 +209,8 @@ nav{
     float:left;
 }
 .icon {
-    height: 4vh;
-    width: 4vh;
+    height: 5vh;
+    width: 5vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -220,20 +226,33 @@ nav{
 }
 
 .github{
-    background-image: url("../img/github.png");
+    background-image: url("../img/githubColored.svg");
+    &:hover{
+        background-image: url("../img/github.svg");
+    }
 }
 
 .linkedin{
-    background-image: url("../img/linkedin.png");
+    background-image: url("../img/linkedinColored.svg");
+    &:hover{
+        background-image: url("../img/linkedin.svg");
+    }
 }
 
 .twitter{
-    background-image: url("../img/twitter.png");
+    background-image: url("../img/twitterColored.svg");
+    &:hover{
+        background-image: url("../img/twitter.svg");
+    }
 }
 
 .gmail{
-    background-image: url("../img/gmail.png");
+    background-image: url("../img/gmailColored.svg");
+    &:hover{
+        background-image: url("../img/gmail.svg");
+    }
 }
+
 .orange{
     background-color: @orange;
 }
@@ -316,7 +335,7 @@ aside{
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-content: stretch;
-    width:100%;
+    width:98%;
     transition: all .25s ease-in-out;
     overflow-y: visible;
 }
@@ -333,9 +352,7 @@ aside{
         position:relative;
     }
     overflow-y: visible;
-    h2{
-        text-align:center;
-    }
+
 }
 
 
@@ -390,6 +407,25 @@ a{
     }
 }
 
+.nav
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    width:98%;
+    transition: all .25s ease-in-out;
+}
+
+.nav-button {
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    width:100%;
+    height:100%;
+
+}
 
 
 

@@ -104,8 +104,6 @@ header .logo {
   padding: 0;
 }
 .menu .menuitem {
-  border-top-left-radius: 1vw;
-  border-top-right-radius: 1vw;
   display: block;
   text-align: center;
   text-decoration: none;
@@ -132,6 +130,14 @@ header .logo {
   padding: 1rem 0;
   transition: all 0.25s ease-in-out;
   font-size: 1.3em;
+}
+.menu .menuitem.selected {
+  background-color: #6699AA;
+  background-image: none;
+}
+.menu .menuitem.selected a {
+  color: #FFFFFF;
+  font-weight: bold;
 }
 nav {
   margin-top: 1%;
@@ -160,8 +166,8 @@ nav .menu div {
   float: left;
 }
 .icon {
-  height: 4vh;
-  width: 4vh;
+  height: 5vh;
+  width: 5vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -176,16 +182,28 @@ nav .menu div {
   cursor: pointer;
 }
 .github {
-  background-image: url("../img/github.png");
+  background-image: url("../img/githubColored.svg");
+}
+.github:hover {
+  background-image: url("../img/github.svg");
 }
 .linkedin {
-  background-image: url("../img/linkedin.png");
+  background-image: url("../img/linkedinColored.svg");
+}
+.linkedin:hover {
+  background-image: url("../img/linkedin.svg");
 }
 .twitter {
-  background-image: url("../img/twitter.png");
+  background-image: url("../img/twitterColored.svg");
+}
+.twitter:hover {
+  background-image: url("../img/twitter.svg");
 }
 .gmail {
-  background-image: url("../img/gmail.png");
+  background-image: url("../img/gmailColored.svg");
+}
+.gmail:hover {
+  background-image: url("../img/gmail.svg");
 }
 .orange {
   background-color: #FF6200;
@@ -255,7 +273,7 @@ aside .info h2 {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-content: stretch;
-  width: 100%;
+  width: 98%;
   transition: all 0.25s ease-in-out;
   overflow-y: visible;
 }
@@ -271,9 +289,6 @@ aside .info h2 {
 .card-item div {
   float: left;
   position: relative;
-}
-.card-item h2 {
-  text-align: center;
 }
 .foto {
   height: 80%;
@@ -317,6 +332,22 @@ a strong {
 }
 a strong:hover {
   color: #6699AA;
+}
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  width: 98%;
+  transition: all 0.25s ease-in-out;
+}
+.nav-button {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: auto;
+  width: 100%;
+  height: 100%;
 }
 /* ==========================================================================
    Helper classes
