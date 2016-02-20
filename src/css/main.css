@@ -82,6 +82,7 @@ body {
   padding-left: 10%;
   padding-right: 10%;
   padding-top: 1%;
+  overflow-y: hidden;
 }
 header {
   position: relative;
@@ -156,7 +157,7 @@ nav .menu div {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
   align-items: center;
   width: 15%;
@@ -228,7 +229,7 @@ article {
   height: 100%;
   float: left;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: auto;
 }
 article .article {
   padding-top: 2%;
