@@ -229,11 +229,11 @@ article {
   height: 100%;
   float: left;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 article .article {
-  padding-top: 2%;
   margin-left: 3%;
+  height: 100%;
 }
 aside {
   position: relative;
@@ -259,6 +259,7 @@ aside .info h2 {
   justify-content: flex-start;
   align-content: stretch;
   width: 300%;
+  height: 100%;
   transition: all 0.25s ease-in-out;
 }
 .card {
@@ -266,7 +267,8 @@ aside .info h2 {
   flex: 0 1 auto;
   align-self: auto;
   width: 100%;
-  overflow-y: visible;
+  height: 100%;
+  overflow: hidden;
 }
 .card-item-separator {
   display: flex;
@@ -274,16 +276,23 @@ aside .info h2 {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-content: stretch;
-  width: 98%;
+  width: 100%;
   transition: all 0.25s ease-in-out;
-  overflow-y: visible;
+  height: 100%;
+}
+.card-item-separator.selected {
+  overflow-y: auto;
+}
+.card-item-separator:not(.selected) {
+  overflow-y: hidden;
 }
 .card-item {
+  padding-top: 2%;
   order: 0;
   flex: 0 1 auto;
   align-self: auto;
   width: 100%;
-  height: 100%;
+  height: 98%;
   margin-right: 3%;
   overflow-y: visible;
 }
@@ -342,6 +351,7 @@ a strong:hover {
   align-content: stretch;
   width: 98%;
   transition: all 0.25s ease-in-out;
+  border-bottom: 2px solid #FF6200;
 }
 .nav-button {
   order: 0;
@@ -349,6 +359,18 @@ a strong:hover {
   align-self: auto;
   width: 100%;
   height: 100%;
+  text-align: center;
+  line-height: 2em;
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: #447788;
+  color: #FFFFFF;
+  font-size: 1.25em;
+  margin-top: 1%;
+  cursor: pointer;
+}
+.nav-button:hover {
+  background-color: #6699AA;
 }
 /* ==========================================================================
    Helper classes

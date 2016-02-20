@@ -38,23 +38,36 @@
 
         var percentage = -100 * position;
         var margin =percentage + "%";
-        document.getElementsByClassName("carousel")[0].style.marginLeft = margin;
+        var carousel = document.getElementsByClassName("carousel")[0]
+        carousel.style.marginLeft = margin;
 
-        var children = document.getElementsByClassName("menu")[0].children;
+        var menuChildren = document.getElementsByClassName("menu")[0].children;
 
-        console.log(children);
-        console.log(children.length);
-
-        for(var i = 0; i < children.length; i++)
+        for(var i = 0; i < menuChildren.length; i++)
         {
             console.log(i);
             if(i == position)
             {
-                children[i].className = children[i].className + " selected";
+                menuChildren[i].className = menuChildren[i].className + " selected";
             }
             else
             {
-                children[i].className = children[i].className.replace('selected','');
+                menuChildren[i].className = menuChildren[i].className.split('selected').join('');
+            }
+        }
+
+        var carouselChildren = carousel.children;
+
+        for(var i = 0; i < carouselChildren.length; i++)
+        {
+
+            if(i == position)
+            {
+                carouselChildren[i].children[0].className = carouselChildren[i].children[0].className + " selected";
+            }
+            else
+            {
+                carouselChildren[i].children[0].className = carouselChildren[i].children[0].className.split('selected').join('');
             }
         }
     }
@@ -83,7 +96,7 @@
     <article>
         <div class="article">
             <div class="carousel">
-                <div class="card" >
+                <div class="card" id="card-0" >
                     <div class="card-item-separator">
                         <div class="card-item" >
                             <div class="foto">
@@ -106,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card" >
+                <div class="card" id="card-1">
 
                     <div class="card-item-separator">
                         <div class="card-item" >
@@ -142,10 +155,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="card-2">
                     <div class = "nav">
                         <div class = "nav-button">Charlas</div>
                         <div class = "nav-button">Otros</div>
+                    </div>
+                    <div class = "carousel" style = "width:200%;">
+                        <div class = "card">
+                            Charla de la Codemotion se sale mil
+                        </div>
+                        <div class = "card">
+                            Los otros son importantes
+                        </div>
                     </div>
                 </div>
             </div>
