@@ -33,6 +33,7 @@
     ga('create','UA-XXXXX-X','auto');ga('send','pageview');
 </script>
 
+
 <script>
     function moveArticle(position){
 
@@ -46,6 +47,7 @@
         for(var i = 0; i < menuChildren.length; i++)
         {
             console.log(i);
+            console.log(position);
             if(i == position)
             {
                 menuChildren[i].className = menuChildren[i].className + " selected";
@@ -156,13 +158,31 @@
                     </div>
                 </div>
                 <div class="card" id="card-2">
-                    <div class = "nav">
+                    <!--<div class = "nav">
                         <div class = "nav-button">Charlas</div>
                         <div class = "nav-button">Otros</div>
-                    </div>
-                    <div class = "carousel" style = "width:200%;">
+                    </div>-->
+                    <div class = "carousel" style = "width:200%;margin-top: 3%;">
                         <div class = "card">
-                            Charla de la Codemotion se sale mil
+                            <h2>Charlas</h2>
+                            <p><a href="https://www.youtube.com/watch?v=gpue0COBHUU"><b>Organiza tu front con Dart y Polymer </b></a>
+                                (Codemotion 2015, Madrid DUG) </p>
+                            <p>Explicación de las bondades de Dart y Polymer, tanto por separado como
+                                juntos, haciendo hincapié en la facilidad de reutilización y la modularidad,
+                                advirtiendo también algunos antipatrones observados, como el uso en situaciones
+                                que no son idóneas, como en entornos donde no hay elementos reutilizables.
+                            </p>
+                            <p><a href="http://es.slideshare.net/dovaleac/uso-de-git-un-caso-real"><b>Uso de Git: un caso real </b></a>(Spanish Git Meetup)</p>
+                            <p> En esta breve ponencia explicamos el workflow que utilizamos con Git en Yump,
+                                y otras estrategias, problemas y soluciones</p>
+
+                            <h2>Eventos</h2>
+                            <p>Soy asistente habitual de varios meetups, especialmente el de Madrid GUG (Groovy, Grails...), API addicts, y en general otros muchos relacionados con la tecnología</p>
+                            <p>Además, soy el organizador de Madrid DUG, un grupo de meetup en el que hablamos de Dart</p>
+                            <p>También me gusta participar en hackathones como <a href="https://twitter.com/T3chFest/status/696054514202370048"><b>éste</b></a>, y ganar premios!
+                            </p>
+
+
                         </div>
                         <div class = "card">
                             Los otros son importantes
@@ -186,5 +206,22 @@
 <footer>
     <div>Pablo González Doval</div>
 </footer>
+
+
+<script>
+    (function() {
+        var hash = window.location.hash.replace("#","");
+        var hashMap = {
+            "home":0,
+            "skills":1,
+            "social":2
+        }
+
+        moveArticle(hashMap[hash]);
+
+
+    })();
+</script>
+
 </body>
 </html>

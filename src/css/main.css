@@ -343,6 +343,9 @@ a strong {
 a strong:hover {
   color: #6699AA;
 }
+a b:hover {
+  color: #FF6200;
+}
 .nav {
   display: flex;
   flex-direction: row;
@@ -366,7 +369,7 @@ a strong:hover {
   background-color: #447788;
   color: #FFFFFF;
   font-size: 1.25em;
-  margin-top: 1%;
+  margin-top: 2%;
   cursor: pointer;
 }
 .nav-button:hover {
