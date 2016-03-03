@@ -148,7 +148,7 @@ nav {
 nav .menu {
   display: flex;
   width: 75%;
-  float: left;
+  float: right;
 }
 nav .menu div {
   flex: 1 1 100%;
@@ -162,9 +162,10 @@ nav .menu div {
   align-items: center;
   width: 15%;
   padding-left: 5%;
+  padding-right: 5%;
   height: 100%;
   min-height: 5vh;
-  float: left;
+  float: right;
 }
 .icon {
   height: 5vh;
@@ -285,6 +286,7 @@ aside .info h2 {
 }
 .card-item-separator:not(.selected) {
   overflow-y: hidden;
+  color: #DDDDEE;
 }
 .card-item {
   padding-top: 2%;
@@ -512,5 +514,39 @@ a b:hover {
   h2,
   h3 {
     page-break-after: avoid;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .main {
+    height: 77vh;
+  }
+  article {
+    width: 100%;
+  }
+  aside {
+    width: 0%;
+  }
+  nav .icon-container {
+    align-items: flex-end;
+    width: 37%;
+  }
+  nav .icon-container .icon {
+    height: 4.25vh;
+    width: 4.25vh;
+  }
+  nav .menu {
+    width: 100%;
+  }
+  .foto {
+    height: 36%;
+    min-height: 16vh;
+    width: 71%;
+    margin-left: 13%;
+  }
+  .card-item-separator {
+    flex-direction: column;
+  }
+  header {
+    display: none;
   }
 }
