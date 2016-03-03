@@ -344,7 +344,7 @@ aside{
     transition: all .25s ease-in-out;
     height:100%;
     &.selected{
-        overflow-y: auto;
+        overflow-y: hidden;
     }
     &:not(.selected){
         overflow-y: hidden;
@@ -658,6 +658,9 @@ a{
     }
     .card-item-separator{
         flex-direction: column;
+        &.selected{
+            overflow-y: auto;
+        }
     }
     header{
         display:none;

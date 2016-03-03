@@ -282,7 +282,7 @@ aside .info h2 {
   height: 100%;
 }
 .card-item-separator.selected {
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 .card-item-separator:not(.selected) {
   overflow-y: hidden;
@@ -545,6 +545,9 @@ a b:hover {
   }
   .card-item-separator {
     flex-direction: column;
+  }
+  .card-item-separator.selected {
+    overflow-y: auto;
   }
   header {
     display: none;
